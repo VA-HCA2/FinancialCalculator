@@ -9,8 +9,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="styles/styles.css">
-        <script src="scripts/presentCalc.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="scripts/presentCalc.js"></script>
     <title>Financial Co.</title>
 </head>
 
@@ -25,62 +25,56 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="presentValue.html">Mortage Calculator</a>
+                    <a class="nav-link" href="mortgageCalc.html">Mortage Calculator</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="presentValue.html">Future Value</a>
+                    <a class="nav-link" href="futureValue.html">Future Value</a>
                 </li>
             </ul>
         </div>
     </nav>
     <main>
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        Present Value Calculator
+        <section class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Present Value Calculator</h1>
+                </div>
+                <div class="col">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Annual Payout $:</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Large" id="num1">
                     </div>
-                    <div class="col">
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Annual Payout $:</span>
-                            </div>
-                            <input type="text" class="form-control" aria-label="Large" id="num1">
+                    <br>
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Growth Rate %:</span>
                         </div>
-                        <br>
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Growth Rate %:</span>
-                            </div>
-                            <input type="text" class="form-control" id="num2">
+                        <input type="text" class="form-control" id="num2">
+                    </div>
+                    <br>
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Years to Pay Out:</span>
                         </div>
-                        <br>
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">Years to Pay Out:</span>
-                            </div>
-                            <input type="text" class="form-control" id="num3">
+                        <input type="text" class="form-control" id="num3">
+                    </div>
+                    <br>
+                    <button id="futureBtn" type="button" class="btn btn-outline-primary">Calculate</button>
+                    <br>
+                    <br>
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <!--- Result-->
+                            <span class="input-group-text">Future Value $:</span>
                         </div>
-                        <br>
-                        <button id="futureBtn" type="button" class="btn btn-outline-primary">Calculate</button>
-                        <div class="input-group input-group-lg">
-                            <div class="input-group-prepend">
-                                <!--- Result-->
-                                <span class="input-group-text">Future Value $:</span>
-                            </div>
-                            <input id="results" type="text" class="form-control">
-                        </div>
-                        </div>
+                        <input id="results" type="text" class="form-control">
                     </div>
                 </div>
-        </main>
-    
-
-
-
-
-
+            </div>
+        </section>
     </main>
-
 
 
     <!-- Optional JavaScript -->
