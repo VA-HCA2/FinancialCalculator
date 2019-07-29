@@ -1,23 +1,36 @@
 "use strict";
 //Future Value Calculator
+//Mortgage Calculator
+/* This function calculates the Mortgage 
+* @param depositAmnt - Initial amount 
+* @param antInRate- Ineterest rate per year 
+* @param numOfYears- Number of years to calculate future value 
+* @param monthlyPayment - MOnthly Payment for the loan 
+* @param totalCst- Total Cost of the Mortgage 
+*/ 
 
 function futureValue() {
-    let num1 = document.getElementById("num1").value;
-    num1 = parseFloat(num1);
+     // Get Data from screen 
+    let depositAmnt = document.getElementById("depositAmnt").value;
+    depositAmnt = parseFloat(depositAmnt);
 
-    let num2 = document.getElementById("num2").value;
-    num2 = parseFloat(num2);
+    let anIntRate = document.getElementById("anIntRate").value;
+    anIntRate = parseFloat(anIntRate);
 
-    let num3 = document.getElementById("num3").value;
-    num3 = parseFloat(num3);
+    let numOfYears = document.getElementById("numOfYears").value;
+    numOfYears = parseFloat(numOfYears);
 
-    let term = num3 * 12
-    let apr = num2 / 1200
-    let futurev = num1 * Math.pow(1 + apr, term);
+     // Convert from monthly percentage to annual percentage and decimal form
+    let term = numOfYears * 12
+    let apr = anIntRate / 1200
+
+    // Calculate future value
+    let futurev = depositAmnt * Math.pow(1 + apr, term);
     const resultField = document.getElementById("results");
     resultField.value = futurev.toFixed(2);
 
-    let interestEarn = futurev-num1
+    // Put result back in UI
+    let interestEarn = futurev - depositAmnt
     const result2Field = document.getElementById("results2");
     result2Field.value = interestEarn.toFixed(2);
 

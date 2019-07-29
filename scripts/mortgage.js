@@ -1,26 +1,41 @@
 "use strict";
 //Mortgage Calculator
+/* This function calculates the Mortgage 
+* @param intRate - The interest rate for the Loan
+* @param loanLength - For how many years is the loan requested for 
+* @param princpl - The total amount of the Mortgage
+* @param monthlyPayment - MOnthly Payment for the loan 
+* @param totalCst- Total Cost of the Mortgage 
+*/ 
 
 function Mortgage()
  {
-    let num1=document.getElementById("num1").value;
-    num1=parseFloat(num1);
+     // Get Data from screen 
 
-    let num2=document.getElementById("num2").value;
-    num2=parseFloat(num2);
+    let intRate=document.getElementById("intRate").value;
+    intRate=parseFloat(intRate);
 
-    let num3=document.getElementById("num3").value;
-    num3=parseFloat(num3);
+    let loanLength=document.getElementById("loanLength").value;
+    loanLength=parseFloat(loanLength);
 
-    let apr= num1/1200
-    let term=num2*12
-    let mrtg= num3*(apr* Math.pow((1 + apr), term))/(Math.pow((1 + apr), term)-1);
-    const resultField=document.getElementById("result");
-    resultField.value= mrtg.toFixed(2);
+    let princpl=document.getElementById("princpl").value;
+    princpl=parseFloat(princpl);
+
+    // Convert from monthly percentage to annual percentage and decimal form
+    let apr= intRate/1200  
+    let term=loanLength*12
+
+     // Calculate mortgage
+
+    let mrtg= princpl*(apr* Math.pow((1 + apr), term))/(Math.pow((1 + apr), term)-1);
+    const monthlyPaymentField=document.getElementById("monthlyPayment");
+    monthlyPaymentField.value= mrtg.toFixed(2);
+
+    // Put result back in UI
 
     let totalCost=mrtg*term
-    const result=document.getElementById("result2");
-    result.value= totalCost.toFixed(2);
+    const totalCst=document.getElementById("totalCst");
+    totalCst.value= totalCost.toFixed(2);
 
  }
 

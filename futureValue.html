@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
         <a class="navbar-brand" href="index.html">Financial Co.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,56 +33,41 @@
             </ul>
         </div>
     </nav>
-    <main>
-        <section class="container">
+
+    <Main class="row no-gutters">
+        <section class="container col-md-3 left ">
             <div class="row">
                 <div class="col">
-                    <h1>Future Value </h1>
-                </div>
-                <div class="col">
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Deposit Amount $:</span>
+                    <h1>Future Value</h1>
+                    <form class="form-signin " autocomplete="off" method="GET">
+                        <div class="form-group">
+                            <label for="depositAmnt">Deposit Amount </label>
+                            <input type="text" class="form-control" id="depositAmnt" autofocus>
                         </div>
-                        <input type="text" class="form-control" aria-label="Large" id="num1">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Annual Interest Rate %:</span>
+                        <div class="form-group">
+                            <label for="anIntRate">Annual Interest Rate </label>
+                            <input type="text" class="form-control" id="anIntRate">
                         </div>
-                        <input type="text" class="form-control" id="num2">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Number of Years</span>
+                        <div class="form-group">
+                            <label for="numOfYears">Number of Years </label>
+                            <input type="text" class="form-control" id="numOfYears">
                         </div>
-                        <input type="text" class="form-control" id="num3">
-                    </div>
-                    <br>
-                    <button id="futureBtn" type="button" class="btn btn-outline-primary">Calculate</button>
-                    <br>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <!--- Result-->
-                            <span class="input-group-text">Future Value $:</span>
+                        <button id="futureBtn" type="button" class="btn btn-outline-primary">Calculate</button>
+                        <button type="reset" class="btn btn-outline-danger">Reset</button>
+                        <!--- Result-->
+                        <div class="form-group">
+                            <label for="results">Future Value</label>
+                            <input type="text" class="form-control" id="results">
                         </div>
-                        <input id="results" type="text" class="form-control">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Interest Earned: </span>
+                        <div class="form-group">
+                            <label for="results2">Interest Earned </label>
+                            <input type="text" class="form-control" id="results2">
                         </div>
-                        <input id="results2" type="text" class="form-control">
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
-
 
 
     <!-- Optional JavaScript -->

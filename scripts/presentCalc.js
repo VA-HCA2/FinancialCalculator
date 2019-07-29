@@ -1,26 +1,38 @@
 "use strict";
 //Present Value Calculator
+/* This function calculates the present value of a ordinary annuity
+* @param anPayout - Desired annual Payout
+* @param growthRte - Interest rate 
+* @param numOfYears- Number of years to pay out
+* @param futureValue- Future value of the initial payout 
+*/ 
 
 function presentValue() {
-    let num1 = document.getElementById("num1").value;
-    num1 = parseFloat(num1);
 
-    let num2 = document.getElementById("num2").value;
-    num2 = parseFloat(num2);
+    // Get Data from screen 
+    let anPayout = document.getElementById("anPayout").value;
+    anPayout = parseFloat(anPayout);
 
-    let num3 = document.getElementById("num3").value;
-    num3 = parseFloat(num3);
-    
-    let int=num2/100;
+    let growthRte = document.getElementById("growthRte").value;
+    growthRte = parseFloat(growthRte);
 
-    let presentValue = num1*((1-Math.pow(1+int,-num3))/int)
-    const resultField = document.getElementById("results");
+    let numOfYears = document.getElementById("numOfYears").value;
+    numOfYears = parseFloat(numOfYears);
+
+    // Adjust growthRte to be a percent (ex 5 becomes .05)
+    let int = growthRte / 100;
+
+    // Calculate present value
+    let presentValue = anPayout * ((1 - Math.pow(1 + int, -numOfYears)) / int)
+
+    // Put result back in UI
+    const resultField = document.getElementById("futureValue");
     resultField.value = presentValue.toFixed(2);
 
 }
 
 function init() {
-    const btn = document.getElementById("futureBtn");
+    const btn = document.getElementById("presentBtn");
     btn.onclick = presentValue;
 
 }
