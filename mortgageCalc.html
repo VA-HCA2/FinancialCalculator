@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
         <a class="navbar-brand" href="index.html">Financial Co.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,51 +34,36 @@
         </div>
     </nav>
 
-    <main>
-        <section class="container">
+    <Main class="row no-gutters">
+        <section class="container col-md-3 left ">
             <div class="row">
-                <div class="col">
+                <div class="col ">
                     <h1>Mortgage Calculator</h1>
-                </div>
-                <div class="col">
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Interest Rate %</span>
+                    <form class="form-signin " autocomplete="off" method="GET" >
+                        <div class="form-group">
+                            <label for="intRate">Interest Rate %</label>
+                            <input type="text" class="form-control" id="intRate" autofocus >
                         </div>
-                        <input type="text" class="form-control" aria-label="Large" id="num1">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Loan Length:</span>
+                        <div class="form-group">
+                            <label for="loanLength">Loan Length:</label>
+                            <input type="text" class="form-control" id="loanLength">
                         </div>
-                        <input type="text" class="form-control" id="num2">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Principal $</span>
+                        <div class="form-group">
+                            <label for="princpl">Principal </label>
+                            <input type="text" class="form-control" id="princpl">
                         </div>
-                        <input type="text" class="form-control" id="num3">
-                    </div>
-                    <br>
-                    <button id="mortageBtn" type="button" class="btn btn-outline-primary">Calculate</button>
-                    <br>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <!--- Result-->
-                            <span class="input-group-text">Monthly Payment $:</span>
+                        <button id="mortageBtn" type="button" class="btn btn-outline-primary">Calculate</button>
+                        <button type="reset" class="btn btn-outline-danger">Reset</button>
+                        <!--- Result-->
+                        <div class="form-group">
+                            <label for="monthlyPayment">Monthly Payment </label>
+                            <input type="text" class="form-control" id="monthlyPayment">
                         </div>
-                        <input id="result" type="text" class="form-control">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Total Cost $: </span>
+                        <div class="form-group">
+                            <label for="totalCst">Total Cost </label>
+                            <input type="text" class="form-control" id="totalCst">
                         </div>
-                        <input id="result2" type="text" class="form-control">
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>

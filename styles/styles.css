@@ -1,6 +1,8 @@
-body { padding-top:150px; }
+body {
+    padding-top: 150px;
+}
 
-h1{ font-size: 30px;
-    color: rgb(53, 45, 121);
-
+h1 {
+    font-size: 30px;
+    color: rgb(182, 58, 68)
 }

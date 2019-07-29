@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-danger">
         <a class="navbar-brand" href="index.html">Financial Co.</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
             aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,44 +33,32 @@
             </ul>
         </div>
     </nav>
-    <main>
-        <section class="container">
+    <Main class="row no-gutters">
+        <section class="container col-md-3 left ">
             <div class="row">
                 <div class="col">
-                    <h1>Present Value Calculator</h1>
-                </div>
-                <div class="col">
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Annual Payout $:</span>
+                    <h1>Present Value</h1>
+                    <form class="form-signin " autocomplete="off" method="GET">
+                        <div class="form-group">
+                            <label for="anPayout">Annual Payout</label>
+                            <input type="text" class="form-control" id="anPayout" autofocus>
                         </div>
-                        <input type="text" class="form-control" aria-label="Large" id="num1">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Growth Rate %:</span>
+                        <div class="form-group">
+                            <label for="growthRte">Growth Rate</label>
+                            <input type="text" class="form-control" id="growthRte">
                         </div>
-                        <input type="text" class="form-control" id="num2">
-                    </div>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Years to Pay Out:</span>
+                        <div class="form-group">
+                            <label for="numOfYears">Years to Pay Out</label>
+                            <input type="text" class="form-control" id="numOfYears">
                         </div>
-                        <input type="text" class="form-control" id="num3">
-                    </div>
-                    <br>
-                    <button id="futureBtn" type="button" class="btn btn-outline-primary">Calculate</button>
-                    <br>
-                    <br>
-                    <div class="input-group input-group-lg">
-                        <div class="input-group-prepend">
-                            <!--- Result-->
-                            <span class="input-group-text">Future Value $:</span>
+                        <button id="presentBtn" type="button" class="btn btn-outline-primary">Calculate</button>
+                        <button type="reset" class="btn btn-outline-danger">Reset</button>
+                        <!--- Result-->
+                        <div class="form-group">
+                            <label for="futureValue">Future Value</label>
+                            <input type="text" class="form-control" id="futureValue">
                         </div>
-                        <input id="results" type="text" class="form-control">
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
